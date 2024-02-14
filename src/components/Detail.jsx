@@ -18,7 +18,7 @@ function Detail({ card }) {
   return (
     <>
       <section className="preview">
-        <img className="image" src={image || cover} alt="repo" />
+        {/* <img className="image" src={image || cover} alt="repo" /> */}
 
         <section className="autor">
           <section className="info-project">
