@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import Landing from './Landing';
 import Home from './Home';
 import api from '../services/api';
+import Detail from './Detail';
 
 function App() {
   const [card, setCard] = useState({});
@@ -23,6 +24,9 @@ function App() {
           path="/home"
           element={<Home handleCard={handleCard} card={card} />}
         />
+        <Route
+          path="/detail"
+          element={<Detail/>}/>
       </Routes>
     </div>
   );
