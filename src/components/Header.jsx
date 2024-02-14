@@ -12,10 +12,9 @@ const Header = () => {
       </Link>
       <div className="header__text">
         <h1 className="header__text--title">Proyectos Molones</h1>
-        <p className="header__text--slogan">
+        {/* <p className="header__text--slogan">
           Escaparate en linea para recoger ideas a traves de la tecnologia
-        </p>
-        <button className="header__text--btn">VER PROYECTOS</button>
+        </p> */}
       </div>
     </header>
   );

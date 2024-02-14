@@ -3,10 +3,12 @@ import '../scss/App.scss';
 
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Header from './Header';
 import Landing from './Landing';
-import Home from './Home';
-import api from '../services/api';
+import Main from './Main';
+
 import Detail from './Detail';
+import Footer from './Footer';
 
 function App() {
   const [card, setCard] = useState({});
@@ -18,16 +20,18 @@ function App() {
 
   return (
     <div>
+      <Header />
+
       <Routes>
         <Route path="/" element={<Landing card={card} />} />
         <Route
-          path="/home"
-          element={<Home handleCard={handleCard} card={card} />}
+          path="/main"
+          element={<Main handleCard={handleCard} card={card} />}
         />
-        <Route
-          path="/detail"
-          element={<Detail/>}/>
+        <Route path="/detail" element={<Detail card={card} />} />
       </Routes>
+
+      <Footer />
     </div>
   );
 }
