@@ -7,7 +7,7 @@ function Landing({ card }) {
   const { preview } = useParams();
 
   return (
-    <div className="body">
+    <div>
       <div className="landing">
         <h1 className="landing__title">Bienvenido a Proyectos Molones </h1>
         <h3 className="landing__text">
@@ -16,7 +16,7 @@ function Landing({ card }) {
         <Link className="landing__btn--link" to="/main">
           <button className="landing__btn ">Crear un Nuevo Proyecto </button>
         </Link>
-        <Link to="/detail">
+        <Link className='projects__link' to="/detail">
           <div className="projects">
             <div className="firstBlockText">
               <img

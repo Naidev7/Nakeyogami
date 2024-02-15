@@ -1,7 +1,7 @@
 .body{
   background-color: #302c42;background-image: linear-gradient(to right, #232323 -30%, rgba(0, 0, 0, 0) 130%), linear-gradient(to bottom, var(--dark), var(--dark));
 }
-//Fake header
+/* //Fake header
 .fakeHeader {
   display: flex;
   justify-content: space-between;
@@ -22,7 +22,7 @@
 .logo {
   width: 123px;
   height: 46px;
-}
+} */
 
 //LANDING
 .landing {
@@ -59,6 +59,7 @@
     background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
     border-radius: 40px;
     text-decoration: none;
+    cursor: pointer;
     &:hover {
       transform: scale(1.1);
     }
@@ -70,6 +71,8 @@
   }
 }
 
+
+//Div project viewer
 .projects {
   display: flex;
   align-items: center;
@@ -80,6 +83,11 @@
   margin: 0 15px;
   border-radius: 20px;
   cursor: pointer;
+}
+
+.projects__link{
+  text-decoration: none;
+  color: #232323;
 }
 
 .firstBlockText {

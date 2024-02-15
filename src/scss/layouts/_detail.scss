@@ -1,0 +1,31 @@
+.detail{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    &__image{
+       max-width:80vw;
+        margin: auto;
+        height: 400px;
+        position: relative;
+        margin:0 15px 0 15px;
+    }
+}
+.info__container{
+    margin: auto;
+    background-color: white;
+    width:467px;
+    height: 312px;
+    border-radius: 20px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-233.5px);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageGirl{
+    width: 109px;  
+}

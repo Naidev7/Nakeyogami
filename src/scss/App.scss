@@ -11,6 +11,7 @@ $border-color_1: white;
 
 @import 'core/reset';
 @import 'layouts/landing';
+@import 'layouts/detail';
 //font-family {
 
 * {
@@ -23,7 +24,7 @@ $border-color_1: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #302c42;
+  padding: 25px;
 
   &__link {
     color: white;

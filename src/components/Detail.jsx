@@ -3,43 +3,32 @@ import cover from '../images/cover.jpeg';
 import girlUser from '../images/girluser.png';
 
 function Detail({ card }) {
-  const {
-    name,
-    slogan,
-    repo,
-    demo,
-    technologies,
-    desc,
-    autor,
-    job,
-    image,
-    photo,
-  } = card;
+  
   return (
     <>
-      <section className="preview">
-        {/* <img className="image" src={image || cover} alt="repo" /> */}
+      <section className="detail">
+        <img className="detail___image" src={cover} alt="repo" /> 
 
-        <section className="autor">
+        <section className="info__container">
           <section className="info-project">
             <p className="subtitle">Personal Project Card</p>
             <hr className="line" />
 
-            <h2 className="title">{name || 'Elegant Workspace'}</h2>
-            <p className="slogan">{slogan || 'Diseños Exclusivos'}</p>
+            <h2 className="title">Elegant Workspace</h2>
+            <p className="slogan">Diseños Exclusivos</p>
             <p className="desc">
-              {desc || 'Lorem, ipsum dolor sit amet consectetur '}
+              Lorem, ipsum dolor sit amet consectetur 
             </p>
             <div className="technologies">
               <section className="technologies__text">
-                <p className="text">{technologies || 'React JS, MongoDB'}</p>
+                <p className="text">React JS, MongoDB</p>
               </section>
 
               <section className="technologies__iconSection">
-                <a href={demo}>
+                <a href="#">
                   <i className="technologies__iconSection--icon fa-solid fa-globe"></i>
                 </a>
-                <a href={repo}>
+                <a href="#">
                   <i className="technologies__iconSection--icon fa-brands fa-github"></i>
                 </a>
               </section>
@@ -47,9 +36,9 @@ function Detail({ card }) {
           </section>
 
           <section className="info-autor">
-            <img className="image" src={photo || girlUser} alt="userPhoto" />
-            <p className="job">{job || 'Full Stack Developer'}</p>
-            <p className="name">{autor || 'Emmelie Björklund'}</p>
+            <img className="imageGirl" src={girlUser} alt="userPhoto" />
+            <p className="job">Full Stack Developer</p>
+            <p className="name">Emmelie Björklund</p>
           </section>
         </section>
       </section>
