@@ -133,6 +133,7 @@ $border-color_1: white;
       height: 80%;
     }
     .autor {
+      overflow: auto;
       background-color: $background-color_2;
       color: $color_3;
       width: 90%;
@@ -144,7 +145,6 @@ $border-color_1: white;
       flex-direction: row-reverse;
       gap: 40px;
       padding: 30px;
-      overflow-y: scroll;
       @media (min-width: 768px) {
         background-color: $background-color_2;
         color: $color_3;
