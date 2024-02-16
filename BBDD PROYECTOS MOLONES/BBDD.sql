@@ -17,11 +17,26 @@ INSERT INTO autor (name, lastname, job, photo ) VALUES
 
 -- insertar project --
 
-SELECT * FROM project ;
+SELECT * FROM project;
 
 SELECT * FROM project WHERE name LIKE ' %vivir%';
 
 SELECT * FROM project ORDER BY name ASC;
 
-INSERT INTO project ( name, slogan, repo, demo, technologies, `desc`, image) VALUES
+INSERT INTO project (name, slogan, repo, demo, technologies, `desc`, image) VALUES
 ('harry potter', 'muglers sangres sucias','no hay filtros','lsccmds', 'htmlcsss', 'un mago joven que la lia muchop es intrepido', 'cbsnkdjcvnsdjnvld..jpg');
+
+ALTER TABLE project RENAME COLUMN autor_id TO fk_autor_id;
+
+SELECT * FROM project WHERE name LIKE ' %vivir%';
+
+SELECT autor.name, autor.lastname, project.name, project.repo
+FROM autor INNER JOIN project
+ON autor.id = project.fk_autor_id;
+
+SELECT * FROM project;
+
+SELECT autor.name, autor.lastname, project.name, project.repo
+FROM autor INNER JOIN project
+ON autor.id = project.fk_autor_id
+WHERE autor.name = "Nadine";
