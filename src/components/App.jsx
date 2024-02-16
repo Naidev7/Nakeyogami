@@ -1,7 +1,7 @@
 // Fichero src/components/App.jsxx
 import '../scss/App.scss';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './Header';
 import Landing from './Landing';
@@ -9,14 +9,21 @@ import Main from './Main';
 
 import Detail from './Detail';
 import Footer from './Footer';
+import localStorage from "../services/local";
+
 
 function App() {
-  const [card, setCard] = useState({});
+  const [card, setCard] = useState(localStorage.get("valueInputs"), {});
 
   //creamos una funcion encargada de meter clave valor en el formulario
   const handleCard = (key, value) => {
     setCard({ ...card, [key]: value });
   };
+
+  useEffect(()=>{
+    localStorage.set("valueInputs", card)
+  }
+  ,[card])
 
   return (
     <div className='body'>
