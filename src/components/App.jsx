@@ -9,25 +9,35 @@ import Main from './Main';
 
 import Detail from './Detail';
 import Footer from './Footer';
-import localStorage from "../services/local";
-
+import localStorage from '../services/local';
 
 function App() {
-  const [card, setCard] = useState(  localStorage.get("valueInputs"),{});
+  const [card, setCard] = useState(
+    localStorage.get('valueInputs', {
+      name: '',
+      slogan: '',
+      repo: '',
+      demo: '',
+      technologies: '',
+      desc: '',
+      autor: '',
+      job: '',
+      image: '',
+      photo: '',
+    })
+  );
 
   //creamos una funcion encargada de meter clave valor en el formulario
   const handleCard = (key, value) => {
     setCard({ ...card, [key]: value });
   };
 
-
-  useEffect(()=>{
-    localStorage.set("valueInputs", card)
-  }
-  ,[card])
+  useEffect(() => {
+    localStorage.set('valueInputs', card);
+  }, [card]);
 
   return (
-    <div className='body'>
+    <div className="body">
       <Header />
 
       <Routes>
