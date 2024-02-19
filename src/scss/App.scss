@@ -133,6 +133,7 @@ $border-color_1: white;
       height: 80%;
     }
     .autor {
+      overflow: auto;
       background-color: $background-color_2;
       color: $color_3;
       width: 90%;
