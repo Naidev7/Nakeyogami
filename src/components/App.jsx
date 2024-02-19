@@ -13,18 +13,18 @@ import localStorage from "../services/local";
 
 
 function App() {
-  const [card, setCard] = useState(  localStorage.get("valueInputs"),{});
+  const [card, setCard] = useState(  {});
 
   //creamos una funcion encargada de meter clave valor en el formulario
   const handleCard = (key, value) => {
     setCard({ ...card, [key]: value });
   };
 
-
+/*   localStorage.get("valueInputs"),
   useEffect(()=>{
     localStorage.set("valueInputs", card)
   }
-  ,[card])
+  ,[card]) */
 
   return (
     <div className='body'>
