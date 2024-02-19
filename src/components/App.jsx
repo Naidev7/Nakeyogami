@@ -33,7 +33,7 @@ function App() {
         <Route path="/" element={<Landing card={card} />} />
         <Route
           path="/main"
-          element={<Main handleCard={handleCard} card={card} />}
+          element={<Main handleCard={handleCard} card={card} setCard={setCard} />}
         />
         <Route path="/detail" element={<Detail card={card} />} />
       </Routes>

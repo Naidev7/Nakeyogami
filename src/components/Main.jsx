@@ -3,7 +3,7 @@ import Form from './Form';
 import Preview from './Preview';
 import { Link } from 'react-router-dom';
 
-const Main = ({ handleCard, card }) => {
+const Main = ({ handleCard, card, setCard }) => {
   return (
     <main className="main">
       <Link to="/">
@@ -11,7 +11,7 @@ const Main = ({ handleCard, card }) => {
       </Link>
 
       <Preview card={card} />
-      <Form handleCard={handleCard} card={card} />
+      <Form handleCard={handleCard} card={card} setCard={setCard} />
     </main>
   );
 };

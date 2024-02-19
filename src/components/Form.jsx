@@ -4,7 +4,7 @@ import callToApi from '../services/api';
 import GetAvatar from './GetAvatar';
 
 
-const Form = ({ handleCard, card }) => {
+const Form = ({ handleCard, card, setCard }) => {
   const [url, setUrl] = useState();
 
   const handleCreateCard = (ev) => {
@@ -21,6 +21,12 @@ const Form = ({ handleCard, card }) => {
     handleCard(key, value);
    
   };
+
+  const handleReset = ()=>{
+    setCard({});
+    setUrl("");
+    
+  }
 
   return (
     <form className="form" onSubmit={handleCreateCard}>
@@ -141,6 +147,9 @@ const Form = ({ handleCard, card }) => {
           </a>
         </section>
       ) : null}
+      <button onClick={handleReset}>
+        Reseteaaa
+      </button>
     </form>
   );
 };
