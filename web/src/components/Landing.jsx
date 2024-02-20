@@ -1,10 +1,39 @@
 import { Link } from 'react-router-dom';
-import girlUser from '../images/girluser.png';
+
 
 import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import GalleryDetail from './GalleryDetail';
 
 function Landing({ card }) {
   const { preview } = useParams();
+  const [cardGalery,setCardGalery] = useState([]);
+
+
+  useEffect( ()=>{
+    try{
+      async function fetchData (){
+      const url = 'http://localhost:5001/api/projects';
+      const res = await fetch (url);
+      const data = await res.json();
+      setCardGalery(data.data)
+      console.log(data);
+      }
+      fetchData ();
+
+    } catch(err){
+      console.log(err);
+    }
+
+  },[]);
+
+const renderPreview = cardGalery.map((detailCard, index)=>{
+  return (
+   < GalleryDetail key ={index} detailCard ={detailCard}/>
+  )
+})
+
+  
 
   return (
     <div>
@@ -16,35 +45,8 @@ function Landing({ card }) {
         <Link className="landing__btn--link" to="/main">
           <button className="landing__btn ">Crear un Nuevo Proyecto </button>
         </Link>
-        <Link className='projects__link' to="/detail">
-          <div className="projects">
-            <div className="firstBlockText">
-              <img
-                className="firstBlockText__img"
-                src={girlUser}
-                alt="ProjectPhoto"
-              />
-              <h5 className="firstBlockText__job">Full stack developer</h5>
-              <h3 className="firstBlockText__userName">Emmelie Böjklund</h3>
-            </div>
-            <div className="secondBlockText">
-              <h4 className="secondBlockText__project">Elegeant Workspace</h4>
-              <h5 className="secondBlockText__design">Diseños Exclusivos</h5>
-              <p className="secondBlockText__desc">
-                Product Description Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Amet faucibus commodo tellus lectus lobortis.
-                Ultricies lacus, facilisis arcu ac mauris, laoreet sit.
-              </p>
-              <div className="techs">
-                <span className="techs__text">React JS - HTML- CSS</span>
-                <span className="techs__icons">
-                  <i className="technologies__iconSection--icon fa-solid fa-globe icon"></i>
-                  <i className="technologies__iconSection--icon fa-brands fa-github icon"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-        </Link>
+<div>{renderPreview}</div>
+        
       </div>
     </div>
   );
