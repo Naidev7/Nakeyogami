@@ -103,6 +103,15 @@ const Form = ({ handleCard, card }) => {
           onChange={handleInput}  value={card.autor}
           required
         />
+        {/* <input
+          className="input"
+          type="text"
+          placeholder="Apellido"
+          name="lastname"
+          id="lastname"
+          onChange={handleInput}  value={card.autor}
+          required
+        /> */}
         <input
           className="input"
           type="text"

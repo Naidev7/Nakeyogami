@@ -11,6 +11,7 @@ const Preview = ({ card }) => {
     technologies,
     desc,
     autor,
+    //lastname,
     job,
     image,
     photo,

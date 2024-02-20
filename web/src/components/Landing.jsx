@@ -38,7 +38,8 @@ const renderPreview = cardGalery.map((detailCard, index)=>{
   return (
     <div>
       <div className="landing">
-        <h1 className="landing__title">Bienvenido a Proyectos Molones </h1>
+        <h2 className="landing__title">¡Hola!</h2>
+        <h2 className="landing__title">Te damos la bienvenida a Proyectos Molones </h2>
         <h3 className="landing__text">
           Escaparate en línea para recoger ideas a través de la tecnología.
         </h3>
