@@ -3,7 +3,6 @@ import '../scss/App.scss';
 import callToApi from '../services/api';
 import GetAvatar from './GetAvatar';
 
-
 const Form = ({ handleCard, card }) => {
   const [url, setUrl] = useState();
 
@@ -19,7 +18,6 @@ const Form = ({ handleCard, card }) => {
     const key = e.target.id;
     const value = e.target.value;
     handleCard(key, value);
-   
   };
 
   return (
@@ -38,7 +36,8 @@ const Form = ({ handleCard, card }) => {
           placeholder="Nombre del proyecto"
           name="name"
           id="name"
-          onChange={handleInput} value={card.name}
+          onChange={handleInput}
+          value={card.name}
           required
         />
         <input
@@ -47,7 +46,8 @@ const Form = ({ handleCard, card }) => {
           name="slogan"
           id="slogan"
           placeholder="Eslogan"
-          onChange={handleInput}  value={card.slogan}
+          onChange={handleInput}
+          value={card.slogan}
           required
         />
         <input
@@ -56,7 +56,8 @@ const Form = ({ handleCard, card }) => {
           name="repo"
           id="repo"
           placeholder="Repo. https://github.com/nombre-usuarie/nombre-proyecto"
-          onChange={handleInput}  value={card.repo}
+          onChange={handleInput}
+          value={card.repo}
           required
         />
         <input
@@ -65,7 +66,8 @@ const Form = ({ handleCard, card }) => {
           placeholder="Demo"
           name="demo"
           id="demo"
-          onChange={handleInput}  value={card.demo}
+          onChange={handleInput}
+          value={card.demo}
           required
         />
         <input
@@ -74,7 +76,8 @@ const Form = ({ handleCard, card }) => {
           placeholder="Tecnologías"
           name="technologies"
           id="technologies"
-          onChange={handleInput}  value={card.technologies}
+          onChange={handleInput}
+          value={card.technologies}
           required
         />
         <textarea
@@ -83,7 +86,8 @@ const Form = ({ handleCard, card }) => {
           placeholder="Descripción"
           name="desc"
           id="desc"
-          onChange={handleInput}  value={card.desc}
+          onChange={handleInput}
+          value={card.desc}
           required
         ></textarea>
       </fieldset>
@@ -100,25 +104,28 @@ const Form = ({ handleCard, card }) => {
           placeholder="Nombre"
           name="autor"
           id="autor"
-          onChange={handleInput}  value={card.autor}
+          onChange={handleInput}
+          value={card.autor}
           required
         />
-        {/* <input
+        <input
           className="input"
           type="text"
           placeholder="Apellido"
           name="lastname"
           id="lastname"
-          onChange={handleInput}  value={card.autor}
+          onChange={handleInput}
+          value={card.autor}
           required
-        /> */}
+        />
         <input
           className="input"
           type="text"
           placeholder="Trabajo"
           name="job"
           id="job"
-          onChange={handleInput}  value={card.job}
+          onChange={handleInput}
+          value={card.job}
           required
         />
       </fieldset>

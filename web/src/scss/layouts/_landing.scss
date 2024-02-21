@@ -1,5 +1,11 @@
-.body{
-  background-color: #302c42;background-image: linear-gradient(to right, #232323 -30%, rgba(0, 0, 0, 0) 130%), linear-gradient(to bottom, var(--dark), var(--dark));
+.body {
+  background-color: #302c42;
+  background-image: linear-gradient(
+      to right,
+      #232323 -30%,
+      rgba(0, 0, 0, 0) 130%
+    ),
+    linear-gradient(to bottom, var(--dark), var(--dark));
 }
 /* //Fake header
 .fakeHeader {
@@ -31,17 +37,16 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
-  height: 100vh;
+  //height: 100vh;
   text-align: center;
-
 
   &__title {
     color: white;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
   }
   &__text {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     font-size: 18px;
     font-weight: 300;
@@ -72,7 +77,6 @@
   }
 }
 
-
 //Div project viewer
 .projects {
   display: flex;
@@ -86,7 +90,7 @@
   cursor: pointer;
 }
 
-.projects__link{
+.projects__link {
   text-decoration: none;
   color: #232323;
 }
@@ -101,18 +105,18 @@
     color: #909090;
     font-weight: 500;
     font-size: 10px;
-    font-family: "Catamaran", sans-serif;
+    font-family: 'Catamaran', sans-serif;
     margin-bottom: 10px;
   }
   &__userName {
-    font-family: "Catamaran", sans-serif;
+    font-family: 'Catamaran', sans-serif;
     font-size: 14px;
     font-weight: bold;
   }
 }
 
 .secondBlockText {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-left: 10px;
   &__project {
     font-size: 14px;
@@ -139,7 +143,7 @@
   justify-content: space-around;
   margin-left: 10px;
   &__text {
-    font-family: "Catamaran", sans-serif;
+    font-family: 'Catamaran', sans-serif;
     color: #505050;
     font-size: 10px;
     font-weight: 500;
@@ -157,8 +161,14 @@
   }
 }
 
-.fakeFooter{
+.fakeFooter {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
