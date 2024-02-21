@@ -7,7 +7,7 @@ const Main = ({ handleCard, card }) => {
   return (
     <main className="main">
       <Link to="/">
-        <button className="header__text--btn">VER PROYECTOS</button>
+        <button className="listProjectBtn">VER PROYECTOS</button>
       </Link>
 
       <Preview card={card} />
