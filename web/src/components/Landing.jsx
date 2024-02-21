@@ -40,7 +40,7 @@ function Landing({ card }) {
         <Link className="landing__btn--link" to="/main">
           <button className="landing__btn ">Crear un Nuevo Proyecto </button>
         </Link>
-        <div className="gallery">{renderPreview}</div>
+        <div className="list">{renderPreview}</div>
       </div>
     </div>
   );

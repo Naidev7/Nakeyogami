@@ -1,6 +1,6 @@
-import "../scss/App.scss";
-import cover from "../images/cover.jpeg";
-import girlUser from "../images/girluser.png";
+import '../scss/App.scss';
+import cover from '../images/cover.jpeg';
+import girlUser from '../images/girluser.png';
 
 function Detail({ card }) {
   return (
@@ -23,8 +23,8 @@ function Detail({ card }) {
             </h3>
           </div>
           <div className="secondBlockText textCont">
-          <p className="subtitle lineText">Personal Project Card</p>
-          <hr className="line" />
+            {/* <p className="subtitle lineText">Personal Project Card</p>
+          <hr className="line" /> */}
             <h4 className="secondBlockText__project projectText">
               Elegeant Workspace
             </h4>

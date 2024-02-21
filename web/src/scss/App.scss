@@ -174,12 +174,12 @@ $border-color_1: white;
       margin: 0;
     }
   }
-  .project {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border: none;
-  }
+  // .project {
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: 10px;
+  //   border: none;
+  // }
   .autor {
     display: flex;
     flex-direction: column;
@@ -397,4 +397,108 @@ a {
 }
 i {
   text-decoration: none;
+}
+
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 24.1px 9.2px 37px 10.5px;
+  width: 293px;
+  //margin: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 37%;
+  left: 47%;
+  transform: translateX(-136px);
+
+  @media (min-width: 768px) {
+    top: 65%;
+    transform: translateX(-136px);
+  }
+  @media (min-width: 1200px) {
+    top: 90%;
+    transform: translateX(-162px);
+    width: 397px;
+  }
+}
+
+.project_Link {
+  text-decoration: none;
+  color: #232323;
+}
+
+.firstBlockText {
+  &__img {
+    width: 75.4px;
+    height: 80.3px;
+    margin-bottom: 6px;
+    border-radius: 50%;
+  }
+  &__job {
+    color: #909090;
+    font-weight: 500;
+    font-size: 10px;
+    font-family: 'Catamaran', sans-serif;
+    margin-bottom: 10px;
+  }
+  &__userName {
+    font-family: 'Catamaran', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+}
+
+.secondBlockText {
+  font-family: 'Poppins', sans-serif;
+  margin-left: 10px;
+
+  &__project {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 12.6px;
+    text-transform: capitalize;
+  }
+  &__design {
+    color: #575757;
+    font-weight: 500;
+    font-size: 12px;
+    margin: 20px;
+    text-transform: capitalize;
+  }
+  &__desc {
+    color: rgba(62, 62, 62, 0.88);
+    font-size: 8px;
+    margin-bottom: 15px;
+  }
+}
+
+.techs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  margin-left: 10px;
+  &__text {
+    font-family: 'Catamaran', sans-serif;
+    color: #505050;
+    font-size: 10px;
+    font-weight: 500;
+  }
+  &__icons {
+    display: flex;
+    padding: 20px;
+    text-decoration: none;
+  }
+  .icon {
+    box-shadow: 2px 2px 4px 2px #bcd1d8;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 20px;
+    text-decoration: none;
+  }
 }

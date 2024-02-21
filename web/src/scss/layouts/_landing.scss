@@ -56,37 +56,29 @@
 }
 
 //Div project viewer
-.projects {
+.gallery {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
   padding: 24.1px 9.2px 37px 10.5px;
-  width: 320px;
+  width: 293px;
   //margin: 0;
   border-radius: 20px;
   cursor: pointer;
-  position: absolute;
-  top: 43%;
-  left: 50%;
-  transform: translateX(-136px);
 
   @media (min-width: 768px) {
-    top: 72%;
-    transform: translateX(-138px);
   }
   @media (min-width: 1200px) {
-    top: 89%;
-    transform: translateX(-304px);
   }
 }
 
-.projects__link {
+.galleryLink {
   text-decoration: none;
   color: #232323;
 }
 
-.firstBlockText {
+.firstBlockTextGallery {
   &__img {
     width: 75.4px;
     height: 80.3px;
@@ -108,7 +100,7 @@
   }
 }
 
-.secondBlockText {
+.secondBlockTextGallery {
   font-family: 'Poppins', sans-serif;
   margin-left: 10px;
 
@@ -132,7 +124,7 @@
   }
 }
 
-.techs {
+.techsGallery {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,13 +151,7 @@
   }
 }
 
-.fakeFooter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.gallery {
+.list {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
