@@ -50,10 +50,10 @@ server.post('/api/addProject', async (req, res) => {
   const conex = await getConnection();
   console.log(req.body);
   const insertAutor =
-    'insert into autor (name, lastname, job, photo) values (?, ?, ?, ?)';
+    'insert into autor (nameAutor, lastname, job, photo) values (?, ?, ?, ?)';
 
   const [resultAutor] = await conex.query(insertAutor, [
-    req.body.autor,
+    req.body.nameAutor,
     req.body.lastname,
     req.body.job,
     req.body.photo,
