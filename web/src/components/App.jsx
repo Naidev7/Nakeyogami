@@ -21,6 +21,7 @@ function App() {
       technologies: '',
       desc: '',
       autor: '',
+      lastname: '',
       job: '',
       image: '',
       photo: '',

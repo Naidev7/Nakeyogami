@@ -115,7 +115,7 @@ const Form = ({ handleCard, card }) => {
           name="lastname"
           id="lastname"
           onChange={handleInput}
-          value={card.autor}
+          value={card.lastname}
           required
         />
         <input
