@@ -505,7 +505,7 @@ i {
 }
 
 .listProjectBtn {
-  margin-top: 10px;
+  margin-top: -58px;
   color: white;
   text-align: center;
   border: none;
@@ -515,4 +515,7 @@ i {
   width: 100px;
   border: solid 2px white;
   font-size: 1rem;
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }

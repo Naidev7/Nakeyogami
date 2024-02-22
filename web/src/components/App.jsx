@@ -20,7 +20,7 @@ function App() {
       demo: '',
       technologies: '',
       desc: '',
-      autor: '',
+      nameAutor: '',
       lastname: '',
       job: '',
       image: '',

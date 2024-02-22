@@ -8,9 +8,11 @@ const Form = ({ handleCard, card }) => {
 
   const handleCreateCard = (ev) => {
     ev.preventDefault();
+    console.log('me han clicado');
 
     callToApi(card).then((data) => {
       setUrl(data.cardURL);
+      console.log('me han data');
     });
   };
 
@@ -102,10 +104,10 @@ const Form = ({ handleCard, card }) => {
           className="input"
           type="text"
           placeholder="Nombre"
-          name="autor"
-          id="autor"
+          name="nameAutor"
+          id="nameAutor"
           onChange={handleInput}
-          value={card.autor}
+          value={card.nameAutor}
           required
         />
         <input

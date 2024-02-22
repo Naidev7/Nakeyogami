@@ -52,6 +52,7 @@ server.post('/api/addProject', async (req, res) => {
   const insertAutor =
     'insert into autor (nameAutor, lastname, job, photo) values (?, ?, ?, ?)';
 
+  //esto viene del front
   const [resultAutor] = await conex.query(insertAutor, [
     req.body.nameAutor,
     req.body.lastname,
@@ -93,6 +94,8 @@ server.post('/api/addProject', async (req, res) => {
 
 //ejecutar desde el servidor un servidor de estatico
 //tener una pagina estatica en mi proyecto
+
+//crear end poit de tipo get y la ruta q /detail/:id
 
 const staticServer = './web/dist';
 server.use(express.static(staticServer));

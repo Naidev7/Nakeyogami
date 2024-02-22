@@ -10,7 +10,7 @@ const Preview = ({ card }) => {
     demo,
     technologies,
     desc,
-    autor,
+    nameAutor,
     lastname,
     job,
     image,
@@ -51,7 +51,7 @@ const Preview = ({ card }) => {
           <img className="image" src={photo || girlUser} alt="userPhoto" />
           <p className="job">{job || 'Full Stack Developer'}</p>
           <p className="name">
-            {autor + ' ' + lastname || 'Emmelie Björklund'}
+            {nameAutor + ' ' + lastname || 'Emmelie Björklund'}
           </p>
         </section>
       </section>
