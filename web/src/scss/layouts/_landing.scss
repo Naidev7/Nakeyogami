@@ -1,28 +1,12 @@
-.body{
-  background-color: #302c42;background-image: linear-gradient(to right, #232323 -30%, rgba(0, 0, 0, 0) 130%), linear-gradient(to bottom, var(--dark), var(--dark));
+.body {
+  background-color: #302c42;
+  background-image: linear-gradient(
+      to right,
+      #232323 -30%,
+      rgba(0, 0, 0, 0) 130%
+    ),
+    linear-gradient(to bottom, var(--dark), var(--dark));
 }
-/* //Fake header
-.fakeHeader {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 15px;
-  .icon {
-    color: white;
-    font-size: 18px;
-    &__text {
-      font-family: "Poppins", sans-serif;
-      font-weight: 300;
-      font-size: 14px;
-      color: rgb(126, 123, 123);
-    }
-    
-  }
-}
-
-.logo {
-  width: 123px;
-  height: 46px;
-} */
 
 //LANDING
 .landing {
@@ -31,17 +15,16 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
-  height: 100vh;
+  //height: 100vh;
   text-align: center;
-
 
   &__title {
     color: white;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
   }
   &__text {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     font-size: 18px;
     font-weight: 300;
@@ -55,6 +38,7 @@
     justify-content: center;
     align-items: center;
     font-size: 10px;
+    color: white;
     border: none;
     background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
     border-radius: 40px;
@@ -71,58 +55,67 @@
   }
 }
 
-
 //Div project viewer
-.projects {
+.gallery {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
   padding: 24.1px 9.2px 37px 10.5px;
-  width: 320px;
-  margin: 0 15px;
+  width: 293px;
+  //margin: 0;
   border-radius: 20px;
   cursor: pointer;
+
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 1200px) {
+  }
 }
 
-.projects__link{
+.galleryLink {
   text-decoration: none;
   color: #232323;
 }
 
-.firstBlockText {
+.firstBlockTextGallery {
   &__img {
     width: 75.4px;
     height: 80.3px;
     margin-bottom: 6px;
+    border-radius: 50%;
   }
   &__job {
     color: #909090;
     font-weight: 500;
     font-size: 10px;
-    font-family: "Catamaran", sans-serif;
+    font-family: 'Catamaran', sans-serif;
     margin-bottom: 10px;
   }
   &__userName {
-    font-family: "Catamaran", sans-serif;
+    font-family: 'Catamaran', sans-serif;
     font-size: 14px;
     font-weight: bold;
+    text-transform: capitalize;
   }
 }
 
-.secondBlockText {
-  font-family: "Poppins", sans-serif;
+.secondBlockTextGallery {
+  font-family: 'Poppins', sans-serif;
   margin-left: 10px;
+
   &__project {
     font-size: 14px;
     font-weight: 500;
     margin: 12.6px;
+    text-transform: capitalize;
   }
   &__design {
     color: #575757;
     font-weight: 500;
     font-size: 12px;
     margin: 20px;
+    text-transform: capitalize;
   }
   &__desc {
     color: rgba(62, 62, 62, 0.88);
@@ -131,14 +124,14 @@
   }
 }
 
-.techs {
+.techsGallery {
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: space-around;
   margin-left: 10px;
   &__text {
-    font-family: "Catamaran", sans-serif;
+    font-family: 'Catamaran', sans-serif;
     color: #505050;
     font-size: 10px;
     font-weight: 500;
@@ -146,6 +139,7 @@
   &__icons {
     display: flex;
     padding: 20px;
+    text-decoration: none;
   }
   .icon {
     box-shadow: 2px 2px 4px 2px #bcd1d8;
@@ -153,11 +147,21 @@
     cursor: pointer;
     font-size: 12px;
     border-radius: 20px;
+    text-decoration: none;
   }
 }
 
-.fakeFooter{
+.list {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
   justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+i {
+  text-decoration: none;
 }

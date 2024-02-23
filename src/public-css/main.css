@@ -1,0 +1,223 @@
+:root {
+    --color_1: #ffffff;
+    --color_2: white;
+    --color_3: #3e3e3e;
+    --color_4: black;
+    --font-family_1: 'Montserrat', sans-serif;
+    --background-color_1: #302c42;
+    --background-color_2: white;
+    --background-color_3: black;
+    --background-color_4: lightgray;
+    --border-color_1: white;
+}
+
+body {
+    color: #3e3e3e;
+    background-color: #302c42;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.image {
+    width: 90vw;
+    margin: auto;
+    margin-top: 15px;
+    position: relative;
+}
+
+.subtitle {
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.lineText {
+    color: #505050;
+    background-color: white;
+    position: absolute;
+    top: 57px;
+}
+
+.projects {
+    width: 275px;
+}
+
+@media (min-width: 768px) {
+    .projects {
+        max-width: 79vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .image {
+        width: 75vw;
+    }
+    .projects {
+        width: 45vw;
+        gap: 30px;
+        padding: 50px;
+    }
+
+    .projects .girlIMg {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+
+    .projects .job {
+        font-size: 16px;
+    }
+
+    .projects .userName {
+        font-size: 18px;
+    }
+
+    .textCont {
+        text-align: justify;
+        width: 50vw;
+    }
+
+    .textCont .projectText {
+        font-size: 24px;
+        color: black;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        text-align: justify;
+    }
+
+    .textCont .slogan {
+        font-family: 'Poppins', sans-serif;
+        color: #575757;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .textCont .desc {
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        color: rgba(62, 62, 62, 0.88);
+        text-align: justify;
+    }
+
+    .textCont .techsText {
+        font-weight: 500;
+        font-size: 12px;
+        color: #505050;
+    }
+}
+
+
+
+
+/* :root {
+    --color_1: #ffffff;
+    --color_2: white;
+    --color_3: #3e3e3e;
+    --color_4: black;
+    --font-family_1: 'Montserrat', sans-serif;
+    --background-color_1: #302c42;
+    --background-color_2: white;
+    --background-color_3: black;
+    --background-color_4: lightgray;
+    --border-color_1: white;
+  }
+
+body {
+color: var(--color_3);
+background-color: var(--background-color_1);
+font-family: var(--font-family_1);
+}
+  
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .image {
+    width: 90vw;
+    margin: auto;
+    margin-top: 15px;
+    position: relative;
+  }
+  .subtitle {
+    color: white;
+    text-align: center;
+    font-family: var(--font-family_1);
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .lineText {
+    color: #505050;
+    background-color: white;
+    position: absolute;
+    top: 57px;
+  }
+  .projects {
+    width: 275px;
+  }
+  @media (min-width: 768px) {
+    .projects {
+      max-width: 79vw;
+    }
+  }
+  @media (min-width: 1200px) {
+    .image {
+      width: 75vw;
+    }
+    .projects {
+      width: 45vw;
+  
+      gap: 30px;
+      padding: 50px;
+
+      .girlIMg {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+      }
+      .job {
+        font-size: 16px;
+      }
+      .userName {
+        font-size: 18px;
+      }
+    }
+    .textCont {
+      text-align: justify;
+      width: 50vw;
+
+      .projectText {
+        font-size: 24px;
+        color: black;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        text-align: justify;
+      }
+      .slogan {
+        font-family: 'Poppins', sans-serif;
+        color: #575757;
+        font-weight: 500;
+        font-size: 16px;
+      }
+      .desc {
+        font-family: 'Poppins', sans-serif;
+        font: 12px;
+        color: rgba(62, 62, 62, 0.88);
+        text-align: justify;
+      }
+      .techsText {
+        font-weight: 500;
+        font-size: 12px;
+        color: #505050;
+      }
+    }
+  } */
+  
