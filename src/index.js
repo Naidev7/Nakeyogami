@@ -2,11 +2,14 @@ const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2/promise');
 
+
 //1 crear el servidor
 const server = express();
 server.use(cors());
 server.use(express.json({ limit: '25mb' }));
+server.set("view engine", "ejs");
 const port = 5001;
+
 
 server.listen(port, () => {
   console.log(
@@ -39,8 +42,6 @@ server.get('/api/projects', async (req, res) => {
   const sql =
     'SELECT autor.* , project.* FROM autor INNER JOIN project ON autor.id = project.fk_autor_id ';
   const [results, fields] = await conex.query(sql);
-  console.log(results);
-  console.log(fields);
 
   conex.end();
   res.json({ success: true, data: results });
@@ -48,7 +49,6 @@ server.get('/api/projects', async (req, res) => {
 
 server.post('/api/addProject', async (req, res) => {
   const conex = await getConnection();
-  console.log(req.body);
   const insertAutor =
     'insert into autor (nameAutor, lastname, job, photo) values (?, ?, ?, ?)';
 
@@ -79,6 +79,17 @@ server.post('/api/addProject', async (req, res) => {
   });
 });
 
+server.get('/detail/:idProject', async (req, res)=> {
+  const conex = await getConnection();
+  const {idProject} = req.params;
+  const selectProjectId = "SELECT * FROM project INNER JOIN autor ON autor.id = project.fk_autor_id WHERE project.id = ?"; 
+  
+  const [results] = await conex.query(selectProjectId, [idProject]);
+  console.log(results[0]);
+  res.render("detail", {projectDetail: results[0]});
+  
+})
+
 //2 endpoints
 
 // server.get('/api/alladalabers', (req, resp) => {
@@ -97,8 +108,11 @@ server.post('/api/addProject', async (req, res) => {
 
 //crear end poit de tipo get y la ruta q /detail/:id
 
-const staticServer = './web/dist';
+const staticServer = './src/public-react';
 server.use(express.static(staticServer));
+
+const staticServerCSS = './src/public-css';
+server.use(express.static(staticServerCSS));
 
 // {
 //   "name": "nombre proyecto",

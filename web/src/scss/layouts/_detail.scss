@@ -16,20 +16,24 @@
   font-size: 14px;
   font-weight: 300;
 }
+
 .lineText {
   color: #505050;
   background-color: white;
   position: absolute;
   top: 57px;
 }
+
 .projects {
   width: 275px;
 }
+
 @media (min-width: 768px) {
   .projects {
     max-width: 79vw;
   }
 }
+
 @media (min-width: 1200px) {
   .image {
     width: 75vw;
