@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import GalleryDetail from './GalleryDetail';
 
-function Landing({ card }) {
+function Landing() {
   const { preview } = useParams();
   const [cardGalery, setCardGalery] = useState([]);
 
@@ -15,7 +15,6 @@ function Landing({ card }) {
         const res = await fetch(url);
         const data = await res.json();
         setCardGalery(data.data);
-        console.log(data);
       }
       fetchData();
     } catch (err) {

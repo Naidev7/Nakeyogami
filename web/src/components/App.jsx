@@ -7,7 +7,7 @@ import Header from './Header';
 import Landing from './Landing';
 import Main from './Main';
 
-import Detail from './Detail';
+
 import Footer from './Footer';
 import localStorage from '../services/local';
 
@@ -42,12 +42,11 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Landing card={card} />} />
+        <Route path="/" element={<Landing />} />
         <Route
           path="/main"
           element={<Main handleCard={handleCard} card={card} />}
         />
-        <Route path="/detail" element={<Detail card={card} />} />
       </Routes>
 
       <Footer />
