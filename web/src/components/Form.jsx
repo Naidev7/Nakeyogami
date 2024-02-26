@@ -2,6 +2,7 @@ import { useState } from 'react';
 import '../scss/App.scss';
 import callToApi from '../services/api';
 import GetAvatar from './GetAvatar';
+import localStorage from '../services/local';
 
 const Form = ({ handleCard, card }) => {
   const [url, setUrl] = useState();
@@ -23,8 +24,22 @@ const Form = ({ handleCard, card }) => {
   };
 
   const handleReset = ()=>{
-    setCard({});
+    console.log('estoy lista para resetear!')
+    handleCard({
+      name: '',
+      slogan: '',
+      repo: '',
+      demo: '',
+      technologies: '',
+      desc: '',
+      nameAutor: '',
+      lastname: '',
+      job: '',
+      image: '',
+      photo: '',
+    })
     setUrl("");
+    localStorage.remove('valueInputs')
     
   }
 
@@ -165,9 +180,6 @@ const Form = ({ handleCard, card }) => {
           </a>
         </section>
       ) : null}
-      <button onClick={handleReset}>
-        Reseteaaa
-      </button>
     </form>
   );
 };
