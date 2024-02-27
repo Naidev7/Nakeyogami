@@ -11,7 +11,7 @@ function Landing() {
   useEffect(() => {
     try {
       async function fetchData() {
-        const url = 'http://localhost:5001/api/projects';
+        const url = 'https://project-promo-v-module-4-team-2.onrender.com/api/projects';
         const res = await fetch(url);
         const data = await res.json();
         setCardGalery(data.data);
