@@ -76,7 +76,7 @@ server.post('/api/addProject', async (req, res) => {
   ]);
   res.json({
     success: true,
-    cardURL: `http://localhost:5001/detail/${resultProject.insertId}`,
+    cardURL: `https://project-promo-v-module-4-team-2.onrender.com/detail/${resultProject.insertId}`,
   });
 });
 
@@ -91,23 +91,6 @@ server.get('/detail/:idProject', async (req, res)=> {
   
 })
 
-//2 endpoints
-
-// server.get('/api/alladalabers', (req, resp) => {
-
-//   resp.json(adalabers);
-// });
-
-//http://localhost:5001/api/alladalabers
-
-// server.get('/api/oneadalaber', (req, resp) => {
-//   resp.json({ name: 'tere' });
-// });
-
-//ejecutar desde el servidor un servidor de estatico
-//tener una pagina estatica en mi proyecto
-
-//crear end poit de tipo get y la ruta q /detail/:id
 
 const staticServer = './src/public-react';
 server.use(express.static(staticServer));
@@ -115,17 +98,6 @@ server.use(express.static(staticServer));
 const staticServerCSS = './src/public-css';
 server.use(express.static(staticServerCSS));
 
-// {
-//   "name": "nombre proyecto",
-//   "lastname": "aaaa",
-//   "slogan": "hola cara cola",
-//   "repo": "asdf",
-//   "demo": "asdf",
-//   "technologies": "asdf",
-//   "image": "asdf",
-//   "desc": "asdf",
-//   "photo": "asd",
-//   "autor": "sara",
-//   "job": "hola"
+const staticImage = './src/images';
+server.use(express.static(staticImage));
 
-// }
