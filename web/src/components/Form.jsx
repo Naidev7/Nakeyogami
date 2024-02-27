@@ -6,9 +6,10 @@ import GetAvatar from './GetAvatar';
 const Form = ({ handleCard, card, handleReset }) => {
   const [url, setUrl] = useState();
 
- /*  setUrl(card === {} && '' )
-
-  if(cardURL){} */
+  const handleFormReset = () => {
+    handleReset();
+    setUrl('');
+  };
 
   const handleCreateCard = (ev) => {
     ev.preventDefault();
@@ -28,147 +29,151 @@ const Form = ({ handleCard, card, handleReset }) => {
 
   return (
     <>
-    <form className="form" onSubmit={handleCreateCard}>
+      <form className="form" onSubmit={handleCreateCard}>
+        <h2 className="title">Información</h2>
 
-      <h2 className="title">Información</h2>
-
-      <section className="ask-info">
-        <p className="subtitle">Cuéntanos sobre el proyecto</p>
-        <hr className="line" />
-      </section>
-
-      <fieldset className="project">
-        <input
-          className="input"
-          type="text"
-          placeholder="Nombre del proyecto"
-          name="name"
-          id="name"
-          onChange={handleInput}
-          value={card.name}
-          required
-        />
-        <input
-          className="input"
-          type="text"
-          name="slogan"
-          id="slogan"
-          placeholder="Eslogan"
-          onChange={handleInput}
-          value={card.slogan}
-          required
-        />
-        <input
-          className="input"
-          type="text"
-          name="repo"
-          id="repo"
-          placeholder="Repo. https://github.com/nombre-usuarie/nombre-proyecto"
-          onChange={handleInput}
-          value={card.repo}
-          required
-        />
-        <input
-          className="input"
-          type="text"
-          placeholder="Demo"
-          name="demo"
-          id="demo"
-          onChange={handleInput}
-          value={card.demo}
-          required
-        />
-        <input
-          className="input"
-          type="text"
-          placeholder="Tecnologías"
-          name="technologies"
-          id="technologies"
-          onChange={handleInput}
-          value={card.technologies}
-          required
-        />
-        <textarea
-          className="textarea"
-          type="text"
-          placeholder="Descripción"
-          name="desc"
-          id="desc"
-          onChange={handleInput}
-          value={card.desc}
-          required
-        ></textarea>
-      </fieldset>
-
-      <section className="ask-info">
-        <p className="subtitle">Cuéntanos sobre la autora</p>
-        <hr className="line" />
-      </section>
-
-      <fieldset className="autor">
-        <input
-          className="input"
-          type="text"
-          placeholder="Nombre"
-          name="nameAutor"
-          id="nameAutor"
-          onChange={handleInput}
-          value={card.nameAutor}
-          required
-        />
-        <input
-          className="input"
-          type="text"
-          placeholder="Apellido"
-          name="lastname"
-          id="lastname"
-          onChange={handleInput}
-          value={card.lastname}
-          required
-        />
-        <input
-          className="input"
-          type="text"
-          placeholder="Trabajo"
-          name="job"
-          id="job"
-          onChange={handleInput}
-          value={card.job}
-          required
-        />
-      </fieldset>
-
-      <section>
-        <GetAvatar
-          updateAvatar={handleCard}
-          text="Subir foto de la autora"
-          nameInput="photo"
-        />
-
-        <GetAvatar
-          updateAvatar={handleCard}
-          text="Subir foto de proyecto"
-          nameInput="image"
-        />
-      </section>
-      <section className="buttons-img">
-        <button className="btn-large" type="submit">
-          Crear Tarjeta
-        </button>
-      </section>
-
-      {url ? (
-        <section className="card">
-          <div className=""> La tarjeta ha sido creada: </div>
-          <a href={url} className="card__url" target="_blank" rel="noreferrer">
-            {url}
-          </a>
+        <section className="ask-info">
+          <p className="subtitle">Cuéntanos sobre el proyecto</p>
+          <hr className="line" />
         </section>
-      ) : null}
-          <button className='resetBtn' onClick={handleReset}>
+
+        <fieldset className="project">
+          <input
+            className="input"
+            type="text"
+            placeholder="Nombre del proyecto"
+            name="name"
+            id="name"
+            onChange={handleInput}
+            value={card.name}
+            required
+          />
+          <input
+            className="input"
+            type="text"
+            name="slogan"
+            id="slogan"
+            placeholder="Eslogan"
+            onChange={handleInput}
+            value={card.slogan}
+            required
+          />
+          <input
+            className="input"
+            type="text"
+            name="repo"
+            id="repo"
+            placeholder="Repo. https://github.com/nombre-usuarie/nombre-proyecto"
+            onChange={handleInput}
+            value={card.repo}
+            required
+          />
+          <input
+            className="input"
+            type="text"
+            placeholder="Demo"
+            name="demo"
+            id="demo"
+            onChange={handleInput}
+            value={card.demo}
+            required
+          />
+          <input
+            className="input"
+            type="text"
+            placeholder="Tecnologías"
+            name="technologies"
+            id="technologies"
+            onChange={handleInput}
+            value={card.technologies}
+            required
+          />
+          <textarea
+            className="textarea"
+            type="text"
+            placeholder="Descripción"
+            name="desc"
+            id="desc"
+            onChange={handleInput}
+            value={card.desc}
+            required
+          ></textarea>
+        </fieldset>
+
+        <section className="ask-info">
+          <p className="subtitle">Cuéntanos sobre la autora</p>
+          <hr className="line" />
+        </section>
+
+        <fieldset className="autor">
+          <input
+            className="input"
+            type="text"
+            placeholder="Nombre"
+            name="nameAutor"
+            id="nameAutor"
+            onChange={handleInput}
+            value={card.nameAutor}
+            required
+          />
+          <input
+            className="input"
+            type="text"
+            placeholder="Apellido"
+            name="lastname"
+            id="lastname"
+            onChange={handleInput}
+            value={card.lastname}
+            required
+          />
+          <input
+            className="input"
+            type="text"
+            placeholder="Trabajo"
+            name="job"
+            id="job"
+            onChange={handleInput}
+            value={card.job}
+            required
+          />
+        </fieldset>
+
+        <section>
+          <GetAvatar
+            updateAvatar={handleCard}
+            text="Subir foto de la autora"
+            nameInput="photo"
+          />
+
+          <GetAvatar
+            updateAvatar={handleCard}
+            text="Subir foto de proyecto"
+            nameInput="image"
+          />
+        </section>
+        <section className="buttons-img">
+          <button className="btn-large" type="submit">
+            Crear Tarjeta
+          </button>
+        </section>
+
+        {url ? (
+          <section className="card">
+            <div className=""> La tarjeta ha sido creada: </div>
+            <a
+              href={url}
+              className="card__url"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {url}
+            </a>
+          </section>
+        ) : null}
+        <button type="button" className="resetBtn" onClick={handleFormReset}>
           Limpiar datos
         </button>
-    </form>
+      </form>
     </>
   );
 };

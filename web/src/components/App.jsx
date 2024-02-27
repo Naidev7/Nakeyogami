@@ -7,7 +7,6 @@ import Header from './Header';
 import Landing from './Landing';
 import Main from './Main';
 
-
 import Footer from './Footer';
 import localStorage from '../services/local';
 
@@ -37,25 +36,22 @@ function App() {
     localStorage.set('valueInputs', card);
   }, [card]);
 
-  const handleReset = (e) => {
-    e.preventDefault();
-    console.log("estoy lista para resetear!");    
+  const handleReset = () => {
+    console.log('estoy lista para resetear!');
     setCard({
-      name: "",
-      slogan: "",
-      repo: "",
-      demo: "",
-      technologies: "",
-      desc: "",
-      nameAutor: "",
-      lastname: "",
-      job: "",
-      image: "",
-      photo: "",
+      name: '',
+      slogan: '',
+      repo: '',
+      demo: '',
+      technologies: '',
+      desc: '',
+      nameAutor: '',
+      lastname: '',
+      job: '',
+      image: '',
+      photo: '',
     });
-    setUrl("");
-    localStorage.removeItem("valueInputs");
-    handleInput("");
+    localStorage.remove('valueInputs');
   };
 
   return (
@@ -66,7 +62,13 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route
           path="/main"
-          element={<Main handleCard={handleCard} card={card} handleReset={handleReset}/>}
+          element={
+            <Main
+              handleCard={handleCard}
+              card={card}
+              handleReset={handleReset}
+            />
+          }
         />
       </Routes>
 
