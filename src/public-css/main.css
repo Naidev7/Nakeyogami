@@ -78,7 +78,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: white;
-  padding: 24.1px 9.2px 37px 10.5px;
+  padding: 13.1px 9.2px 21px 6.5px;
   /*width: 260px; 
   position: absolute;
   top: 50%;
@@ -86,7 +86,6 @@ body {
   transform: translateY(-6px);
   border-radius: 20px;
   height: fit-content;
-  background-color: red;
 }
 .firstBlockText__img {
   width: 75.4px;
@@ -99,22 +98,22 @@ body {
   font-weight: 500;
   margin-bottom: 10px;
   margin: 11px 22px 30px 7px;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
 }
 .firstBlockText__userName {
   text-transform: capitalize;
-
   font-size: 20px;
   font-weight: bold;
+  margin-left: 5px;
 }
 .secondBlockText__project {
-  font-size: 24px;
+  font-size: 21px;
   text-transform: capitalize;
   /*font-weight: 500;*/
   text-align: left;
   color: #000;
-  margin: 1.1px 3.1px 19px 35px;
+  margin: 1.1px 6.1px 11px 21px;
 }
 .secondBlockText__design {
   text-transform: capitalize;
@@ -213,11 +212,14 @@ body {
     width: 100%;
   }
   .projects {
-    width: 400px;
+    width: 443px;
     top: 60%;
     left: 50%;
     bottom: 20px;
     transform: translateY(-82px);
+  }
+  .secondBlockText__desc {
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -320,4 +322,15 @@ body {
 
 .image__container {
   width: 60vw;
+}
+
+@media (min-width: 768px) {
+  .image__container {
+    width: 67vw;
+  }
+}
+@media (min-width: 1200px) {
+  .image__container {
+    width: 56vw;
+  }
 }

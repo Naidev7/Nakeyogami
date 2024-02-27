@@ -519,18 +519,22 @@ i {
   margin-left: 50%;
   transform: translateX(-50%);
 }
-.resetBtn{
-/*   margin-bottom: -358px;
+.resetBtn {
+  margin-bottom: -358px;
   color: white;
   text-align: center;
   border: none;
   height: 30px;
-  background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
+  background: linear-gradient(191deg, #af7680 -1.57%, #e8b7b7 98.43%);
   border-radius: 40px;
   width: 100px;
   border: solid 2px white;
   font-size: 1rem;
-  position: absolute;
-  margin-left: 50%;
-  transform: translateX(-50%); */
+
+  margin-left: 32%;
+  margin-top: 39px;
+
+  @media (min-width: 1200px) {
+    margin-left: 42%;
+  }
 }
