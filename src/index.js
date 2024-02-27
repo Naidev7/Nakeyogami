@@ -8,7 +8,7 @@ const server = express();
 server.use(cors());
 server.use(express.json({ limit: '25mb' }));
 server.set("view engine", "ejs");
-const port = 5001;
+const port = process.env.PORT || 5001;
 
 
 server.listen(port, () => {
