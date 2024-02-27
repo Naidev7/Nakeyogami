@@ -3,7 +3,7 @@
 function GalleryDetail({ detailCard }) {
   console.log(detailCard)
   return (
-    <a href={`http://localhost:5001/detail/${detailCard.id}`} target='_blank'  className="galleryLink">
+    <a href={`https://project-promo-v-module-4-team-2.onrender.com/detail/${detailCard.id}`} target='_blank'  className="galleryLink">
       <div className="gallery">
         <div className="firstBlockTextGallery">
           <img
