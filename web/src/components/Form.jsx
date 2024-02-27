@@ -3,8 +3,12 @@ import '../scss/App.scss';
 import callToApi from '../services/api';
 import GetAvatar from './GetAvatar';
 
-const Form = ({ handleCard, card }) => {
+const Form = ({ handleCard, card, handleReset }) => {
   const [url, setUrl] = useState();
+
+ /*  setUrl(card === {} && '' )
+
+  if(cardURL){} */
 
   const handleCreateCard = (ev) => {
     ev.preventDefault();
@@ -23,7 +27,9 @@ const Form = ({ handleCard, card }) => {
   };
 
   return (
+    <>
     <form className="form" onSubmit={handleCreateCard}>
+
       <h2 className="title">Información</h2>
 
       <section className="ask-info">
@@ -159,7 +165,11 @@ const Form = ({ handleCard, card }) => {
           </a>
         </section>
       ) : null}
+          <button className='resetBtn' onClick={handleReset}>
+          Limpiar datos
+        </button>
     </form>
+    </>
   );
 };
 
