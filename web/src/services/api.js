@@ -1,5 +1,5 @@
 const callToApi = (dataForm) => {
-  return fetch('http://localhost:5001/api/addProject', {
+  return fetch('https://project-promo-v-module-4-team-2.onrender.com/api/addProject', {
     method: 'POST',
 
     body: JSON.stringify(dataForm),

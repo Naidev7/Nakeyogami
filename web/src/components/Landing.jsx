@@ -4,18 +4,17 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import GalleryDetail from './GalleryDetail';
 
-function Landing({ card }) {
+function Landing() {
   const { preview } = useParams();
   const [cardGalery, setCardGalery] = useState([]);
 
   useEffect(() => {
     try {
       async function fetchData() {
-        const url = 'http://localhost:5001/api/projects';
+        const url = 'https://project-promo-v-module-4-team-2.onrender.com/api/projects';
         const res = await fetch(url);
         const data = await res.json();
         setCardGalery(data.data);
-        console.log(data);
       }
       fetchData();
     } catch (err) {

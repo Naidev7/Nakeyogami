@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom';
+
 
 function GalleryDetail({ detailCard }) {
+  console.log(detailCard)
   return (
-    <Link className="galleryLink" to="/detail">
+    <a href={`http://localhost:5001/detail/${detailCard.id}`} target='_blank'  className="galleryLink">
       <div className="gallery">
         <div className="firstBlockTextGallery">
           <img
@@ -36,7 +37,7 @@ function GalleryDetail({ detailCard }) {
           </div>
         </div>
       </div>
-    </Link>
+    </a>
   );
 }
 
