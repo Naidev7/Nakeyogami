@@ -534,7 +534,6 @@ i {
   transform:scale(0.9);
 } */
 .resetBtn {
-  margin-bottom: -358px;
   color: white;
   text-align: center;
   border: none;
@@ -544,10 +543,9 @@ i {
   width: 100px;
   border: solid 2px white;
   font-size: 1rem;
+  margin-top: 10px;
   cursor: pointer;
-
-  margin-left: 32%;
-  margin-top: 39px;
+ 
 
   @media (min-width: 1200px) {
     margin-left: 42%;

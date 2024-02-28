@@ -170,9 +170,11 @@ const Form = ({ handleCard, card, handleReset }) => {
             </a>
           </section>
         ) : null}
+        <section className="buttons-img">
         <button type="button" className="resetBtn" onClick={handleFormReset}>
           Limpiar datos
         </button>
+        </section>
       </form>
     </>
   );
