@@ -37,15 +37,21 @@ async function getConnection() {
 }
 
 //enpoints
-
 server.get('/api/projects', async (req, res) => {
-  const conex = await getConnection();
-  const sql =
-    'SELECT autor.* , project.* FROM autor INNER JOIN project ON autor.id = project.fk_autor_id ';
-  const [results, fields] = await conex.query(sql);
+  try {
+    const conex = await getConnection();
+    const sql =
+      'SELECT autor.* , project.* FROM autor INNER JOIN project ON autor.id = project.fk_autor_id ';
+    const [results, fields] = await conex.query(sql);
 
-  conex.end();
-  res.json({ success: true, data: results });
+    conex.end();
+    res.json({ success: true, data: results });
+  } catch {
+    res.status(500).send({
+      success: false,
+      message: 'Error de conexion, refresque la pagina',
+    });
+  }
 });
 
 server.post('/api/addProject', async (req, res) => {
