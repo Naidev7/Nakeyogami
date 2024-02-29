@@ -1,69 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/main.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body class="body">
-  <%- include('./header'); %>
-  
+    <link rel="stylesheet" href="/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="body">
+    <%- include('./header'); %>
+
     <section class="detail">
-        <h4 class="subtitle">
-          Escaparate en línea para recoger ideas a través de la tecnología
-        </h4>
-        <div class="image__container">
-          <img class="image" src=<%=projectDetail.image%> alt="repo" />
+      <h4 class="subtitle">
+        Escaparate en línea para recoger ideas a través de la tecnología
+      </h4>
+      <div class="image__container">
+        <img class="image" src="<%" ="projectDetail.image%" /> alt="repo" />
+      </div>
+      <div class="projects">
+        <div class="firstBlockText">
+          <img
+            class="firstBlockText__img girlIMg"
+            src="<%"
+            ="projectDetail.photo%"
+          />
+          alt="Foto de <%=projectDetail.nameAutor%>"/>
+          <h5 class="firstBlockText__job job"><%=projectDetail.job%></h5>
+          <h3 class="firstBlockText__userName userName">
+            <%=projectDetail.nameAutor%>
+          </h3>
         </div>
-        <div class="projects">
-          <div class="firstBlockText">
-            <img
-              class="firstBlockText__img girlIMg"
-              src=<%=projectDetail.photo%>
-              alt="Foto de <%=projectDetail.nameAutor%>"/>
-            <h5 class="firstBlockText__job job"><%=projectDetail.job%></h5>
-            <h3 class="firstBlockText__userName userName">
-                <%=projectDetail.nameAutor%>
-            </h3>
-          </div>
-          <div class="secondBlockText textCont">
-            <!-- {/* <p class="subtitle lineText">Personal Project Card</p>
+        <div class="secondBlockText textCont">
+          <!-- {/* <p class="subtitle lineText">Personal Project Card</p>
           <hr class="line" /> */} -->
-            <h4 class="secondBlockText__project projectText">
-              <%=projectDetail.slogan%>
-            </h4>
-            <h5 class="secondBlockText__design slogan">
-                <%=projectDetail.name%>
-            </h5>
-            <p class="secondBlockText__desc desc">
-                <%=projectDetail.desc%>
-            </p>
-            <div class="techs">
-              <span class="techs__text techsText">
-                <%=projectDetail.technologies%>
-              </span>
-              <span class="techs__icons">
-                <a href=<%=projectDetail.demo%>>
-                    <i class="technologies__iconSection--icon fa-solid fa-globe icon"></i>
-                </a>
-                <a href=<%=projectDetail.repo%>>
-                    <i class="technologies__iconSection--icon fa-brands fa-github icon"></i>
-                </a>
-                <!-- <i class="technologies__iconSection--icon fa-solid fa-globe "></i>
+          <h4 class="secondBlockText__project projectText">
+            <%=projectDetail.slogan%>
+          </h4>
+          <h5 class="secondBlockText__design slogan">
+            <%=projectDetail.name%>
+          </h5>
+          <p class="secondBlockText__desc desc"><%=projectDetail.desc%></p>
+          <div class="techs">
+            <span class="techs__text techsText">
+              <%=projectDetail.technologies%>
+            </span>
+            <span class="techs__icons">
+              <a href="<%" ="projectDetail.demo%"
+                >>
+                <i
+                  class="technologies__iconSection--icon fa-solid fa-globe icon"
+                ></i>
+              </a>
+              <a href="<%" ="projectDetail.repo%"
+                >>
+                <i
+                  class="technologies__iconSection--icon fa-brands fa-github icon"
+                ></i>
+              </a>
+              <!-- <i class="technologies__iconSection--icon fa-solid fa-globe "></i>
                 <i class="technologies__iconSection--icon fa-brands fa-github "></i> -->
-              </span>
-            </div>
+            </span>
           </div>
         </div>
-      </section>
-      <%- include('./footer'); %>
-</body>
+      </div>
+    </section>
+    <%- include('./footer'); %>
+  </body>
 </html>

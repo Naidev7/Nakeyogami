@@ -11,7 +11,10 @@ function Landing() {
   useEffect(() => {
     try {
       async function fetchData() {
-        const url = 'https://project-promo-v-module-4-team-2.onrender.com/api/projects';
+        const url =
+          'https://project-promo-v-module-4-team-2.onrender.com/api/projects';
+
+        // 'http://localhost:5001/api/projects';
         const res = await fetch(url);
         const data = await res.json();
         setCardGalery(data.data);
@@ -21,6 +24,13 @@ function Landing() {
       console.log(err);
     }
   }, []);
+
+  // if (results.length !== 0) {
+  //   conex.end();
+  //   res.json({ success: true, data: results });
+  // } else {
+  //   res.status(401).json({ success: false, message: 'Ha habido un error' });
+  // }
 
   const renderPreview = cardGalery.map((detailCard, index) => {
     return <GalleryDetail key={index} detailCard={detailCard} />;
