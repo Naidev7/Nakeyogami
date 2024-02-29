@@ -1,0 +1,170 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Proyectos Nakeyogami",
+    "version": "1.0.0",
+    "description": "API Tarjetas personales"
+  },
+  "servers": [
+    {
+      "url": "https://project-promo-v-module-4-team-2.onrender.com",
+      "description": "Web Proyectos Nakeyogami"
+    }
+  ],
+  "paths": {
+    "/api/projects": {
+      "get": {
+        "summary": "Galeria de todos los proyectos",
+        "responses": {
+          "200": {
+            "description": "Operación exitosa",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Project"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/addProject": {
+      "post": {
+        "summary": "Crea un nuevo proyecto",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewProject"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Proyecto creado exitosamente"
+          }
+        }
+      }
+    },
+    "/detail/:idProject": {
+      "get": {
+        "summary": "Obtiene detalles de un proyecto específico",
+        "parameters": [
+          {
+            "name": "idproject",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operación exitosa"
+          },
+          "404": {
+            "description": "Proyecto no encontrado"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Project": {
+        "type": "object",
+        "properties": {
+          "idProject": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          },
+          "slogan": {
+            "type": "string"
+          },
+          "repo": {
+            "type": "string"
+          },
+          "demo": {
+            "type": "string"
+          },
+          "technologies": {
+            "type": "string"
+          },
+          "desc": {
+            "type": "string"
+          },
+          "nameAutor": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "job": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "photo": {
+            "type": "string"
+          }
+        }
+      },
+      "NewProject": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "slogan": {
+            "type": "string"
+          },
+          "repo": {
+            "type": "string"
+          },
+          "demo": {
+            "type": "string"
+          },
+          "technologies": {
+            "type": "string"
+          },
+          "desc": {
+            "type": "string"
+          },
+          "nameAutor": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "job": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "photo": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

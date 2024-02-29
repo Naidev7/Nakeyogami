@@ -2,15 +2,15 @@ const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2/promise');
 require('dotenv').config();
-
+const swaggerUI = require('swagger-ui-express');
+const swaggerConfig = require('./swagger.json');
 
 //1 crear el servidor
 const server = express();
 server.use(cors());
 server.use(express.json({ limit: '25mb' }));
-server.set("view engine", "ejs");
+server.set('view engine', 'ejs');
 const port = process.env.PORT || 5001;
-
 
 server.listen(port, () => {
   console.log(
@@ -80,17 +80,18 @@ server.post('/api/addProject', async (req, res) => {
   });
 });
 
-server.get('/detail/:idProject', async (req, res)=> {
+server.get('/detail/:idProject', async (req, res) => {
   const conex = await getConnection();
-  const {idProject} = req.params;
-  const selectProjectId = "SELECT * FROM project INNER JOIN autor ON autor.id = project.fk_autor_id WHERE project.id = ?"; 
-  
+  const { idProject } = req.params;
+  const selectProjectId =
+    'SELECT * FROM project INNER JOIN autor ON autor.id = project.fk_autor_id WHERE project.id = ?';
+
   const [results] = await conex.query(selectProjectId, [idProject]);
   console.log(results[0]);
-  res.render("detail", {projectDetail: results[0]});
-  
-})
+  res.render('detail', { projectDetail: results[0] });
+});
 
+server.use('/api-doc', swaggerUI.serve, swaggerUI.setup(swaggerConfig));
 
 const staticServer = './src/public-react';
 server.use(express.static(staticServer));
@@ -100,4 +101,3 @@ server.use(express.static(staticServerCSS));
 
 const staticImage = './src/images';
 server.use(express.static(staticImage));
-
