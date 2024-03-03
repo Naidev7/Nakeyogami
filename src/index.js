@@ -37,7 +37,6 @@ async function getConnection() {
 }
 
 //enpoints
-
 server.get('/api/projects', async (req, res) => {
   try {
     const conex = await getConnection();

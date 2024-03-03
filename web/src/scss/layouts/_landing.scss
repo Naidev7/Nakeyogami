@@ -1,12 +1,11 @@
-.body {
-  background-color: #302c42;
+/* .body {
   background-image: linear-gradient(
       to right,
       #232323 -30%,
       rgba(0, 0, 0, 0) 130%
     ),
     linear-gradient(to bottom, var(--dark), var(--dark));
-}
+} */
 
 //LANDING
 .landing {
@@ -15,17 +14,16 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
-  //height: 100vh;
   text-align: center;
 
   &__title {
-    color: white;
+      color: #6c584c;
     font-family: 'Montserrat', sans-serif;
     font-size: 40px;
   }
   &__text {
     font-family: 'Montserrat', sans-serif;
-    color: white;
+      color: #6c584c;
     font-size: 18px;
     font-weight: 300;
     margin: 3px 59px 10px 40px;
@@ -40,7 +38,7 @@
     font-size: 10px;
     color: white;
     border: none;
-    background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
+    background: linear-gradient(90deg, #588157 -1.57%, #a3b18a 98.43%);
     border-radius: 40px;
     text-decoration: none;
     cursor: pointer;
@@ -50,7 +48,7 @@
 
     &--link {
       text-decoration: none;
-      color: white;
+      color: #575757;
     }
   }
 }
@@ -63,7 +61,6 @@
   background-color: white;
   padding: 24.1px 9.2px 37px 10.5px;
   width: 293px;
-  //margin: 0;
   border-radius: 20px;
   cursor: pointer;
 
@@ -72,10 +69,15 @@
   @media (min-width: 1200px) {
   }
 }
+.gallery:hover{
+  transform: scale(0.9);
+  transition: ease-in-out 400ms;
+  cursor: pointer;
+}
 
 .galleryLink {
   text-decoration: none;
-  color: #232323;
+  color: #575757;
 }
 
 .firstBlockTextGallery {
@@ -86,7 +88,7 @@
     border-radius: 50%;
   }
   &__job {
-    color: #909090;
+    color: #575757;
     font-weight: 500;
     font-size: 10px;
     font-family: 'Catamaran', sans-serif;
@@ -118,7 +120,7 @@
     text-transform: capitalize;
   }
   &__desc {
-    color: rgba(62, 62, 62, 0.88);
+    color: #575757;
     font-size: 8px;
     margin-bottom: 15px;
   }
