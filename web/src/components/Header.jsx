@@ -11,7 +11,7 @@ const Header = () => {
         </p>
       </Link>
       <div className="header__text">
-        <h1 className="header__text--title">Proyectos Molones</h1>
+        <h1 className="header__text--title">Nakeyogami</h1>
         {/* <p className="header__text--slogan">
           Escaparate en linea para recoger ideas a traves de la tecnologia
         </p> */}

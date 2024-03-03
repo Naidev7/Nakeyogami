@@ -23,7 +23,7 @@ const Preview = ({ card }) => {
 
       <section className="autor">
         <section className="info-project">
-          <p className="subtitle">Personal Project Card</p>
+          <p className="subtitle">Tarjeta de proyecto Personal</p>
           <hr className="line" />
 
           <h2 className="title">{name || 'Elegant Workspace'}</h2>

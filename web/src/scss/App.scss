@@ -17,9 +17,8 @@ $border-color_1: white;
 * {
   font-family: $font-family_1;
 }
-.body{
+.body {
   background-color: #dad7cd;
- 
 }
 
 .header {
@@ -74,14 +73,13 @@ $border-color_1: white;
   flex-direction: column;
   padding-top: 50px;
 
-
   .title {
     color: $color_1;
     text-align: center;
   }
   .ask-info {
     text-align: center;
-   color: #6c584c;
+    color: #6c584c;
     .subtitle {
       padding-bottom: 10px;
       color: #6c584c;
@@ -143,7 +141,7 @@ $border-color_1: white;
   }
   .form {
     //margin: 0 auto;
-  background-color: #dad7cd;
+    background-color: #dad7cd;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     border: solid 1px rgba(0, 0, 0, 0);
     background: radial-gradient(circle at 50% 50%, #dad7cd, #a98467 92%);
@@ -168,7 +166,7 @@ $border-color_1: white;
     border: none;
   }
   .input {
-    background-color:#dad7cd ;
+    background-color: #dad7cd;
     border-color: $border-color_1;
     border-radius: 40px;
     height: 32.3px;
@@ -200,7 +198,7 @@ $border-color_1: white;
     width: 200px;
     border: solid 2px white;
   }
-  .btn-large:hover{
+  .btn-large:hover {
     transform: scale(1.1);
   }
   @media (min-width: 768px) {
@@ -366,7 +364,7 @@ $border-color_1: white;
 .footer {
   display: flex;
   justify-content: center;
-  background-color:#dad7cd;
+  background-color: #dad7cd;
   //bottom: 0;
   @media (min-width: 768px) {
     bottom: 0;
@@ -488,9 +486,8 @@ i {
     text-decoration: none;
   }
 }
-.technologies__iconSection--icon{
+.technologies__iconSection--icon {
   color: black;
-
 }
 
 .listProjectBtn {
@@ -522,13 +519,12 @@ i {
   font-size: 1rem;
   margin-top: 10px;
   cursor: pointer;
- 
 
   @media (min-width: 1200px) {
-    margin-left: 42%;
+    // margin-left: 42%;
   }
 }
-.resetBtn:hover{
+.resetBtn:hover {
   transform: scale(1.1);
-  background: radial-gradient(circle, #c9a227 0%, #ffe169  100%);
+  background: radial-gradient(circle, #c9a227 0%, #ffe169 100%);
 }
