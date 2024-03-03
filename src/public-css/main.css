@@ -4,16 +4,16 @@
   --color_3: #3e3e3e;
   --color_4: black;
   --font-family_1: 'Montserrat', sans-serif;
-  --background-color_1: #302c42;
+  --background-color_1: #6c584c;
   --background-color_2: white;
   --background-color_3: black;
   --background-color_4: lightgray;
   --border-color_1: white;
 }
 
-body {
-  color: #3e3e3e;
-  background-color: #302c42;
+.body {
+  color: #6c584c;
+  background-color: #dad7cd;
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
 }
@@ -32,7 +32,7 @@ body {
 }
 
 .header__link--icon {
-  color: white;
+  color: #6c584c;
   font-size: 1.4rem;
   margin-bottom: 15px;
   text-align: left;
@@ -41,7 +41,7 @@ body {
 .header__text {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #6c584c;
   font-size: 1.5rem;
   align-items: center;
   padding-top: 10px;
@@ -65,7 +65,7 @@ body {
   position: relative;
 }
 .subtitle {
-  color: white;
+  color: #6c584c;
   text-align: center;
 
   font-size: 14px;

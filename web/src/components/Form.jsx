@@ -89,7 +89,7 @@ const Form = ({ handleCard, card, handleReset }) => {
             required
           />
           <textarea
-            className="textarea"
+            className="textarea input"
             type="text"
             placeholder="Descripción"
             name="desc"
