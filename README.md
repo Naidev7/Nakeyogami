@@ -2,6 +2,9 @@
 
 Welcome to our digital project showcase repository! This project is a collaborative effort aimed at creating a digital storefront where users can view, create, and browse through a multitude of projects available on the web.
 
+![nakeyogami](https://github.com/Naidev7/Nakeyogami/assets/150022253/ad69e77b-0133-4afa-8515-6dd304211ece)
+
+
 ### Project Overview
 Our project is a full-stack application, covering both the front end and back end aspects. Here are the key technologies we've utilized:
 
